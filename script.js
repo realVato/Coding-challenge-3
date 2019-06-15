@@ -1,44 +1,26 @@
-
-
-function calculateTip (bill) {
-
+var tipCalculator = function(bill) {
     if (bill < 50) {
-
-        return bill * 0.2;
-
-    } else if (bill >= 50 && bill <= 200) {
-
-        return bill * 0.15;
-
+        return bill * .2;
+    } else if (bill > 50 & bill < 200) {
+        return bill * .15;
     } else {
-
-        return bill * 0.1;
-
+        return bill * .1;
     }
 }
+
 
 var bills = [124, 48, 268];
 
 var tips = [
-            calculateTip(bills[0]), 
-            calculateTip(bills[1]), 
-            calculateTip(bills[2])
-        ];
+    tipCalculator(bills[0]),
+    tipCalculator(bills[1]),
+    tipCalculator(bills[2])
+];
 
 var finalBills = [
-            bills[0] + calculateTip(bills[0]),
-            bills[1] + calculateTip(bills[1]),
-            bills[2] + calculateTip(bills[2])
-        ];
+    bills[0] + tipCalculator(bills[0]),
+    bills[1] + tipCalculator(bills[1]),
+    bills[2] + tipCalculator(bills[2])
+];
 
-console.log(tips);
-console.log(finalBills);
-
-
-
-
-
-
-
-
-
+console.log(tips, finalBills);
